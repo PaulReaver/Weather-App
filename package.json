@@ -1,0 +1,19 @@
+{
+  "name": "weather-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "10.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "prettier": "3.5.1",
+    "vite": "^6.1.0"
+  }
+}
