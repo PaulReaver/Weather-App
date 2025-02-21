@@ -6,23 +6,32 @@ import constraintValidation from './constraintValidation.js';
 import displayLocation from './displayLocation.js';
 
 // Initial city given and temperature display
-let weatherData = await weather('London');
-displayLocation(weatherData.location);
+async function initializeWeather() {
+    try {
+        const weatherData = await weather('London');
+        displayLocation(weatherData.location);
+    } catch (error) {
+        throw new Error('Error initializing weather');
+    }
+}
 
-// Get a reference to the form searchbox
-const searchbox = document.querySelector('#searchbox');
+initializeWeather(); // Call the initialization function
 
-// Get a reference to the form
+// Get a reference to the form searchbox and form
+const searchbox = document.getElementById('searchbox');
 const myForm = document.querySelector('form');
 
 // Constraint validation to show a custom message
 constraintValidation(searchbox);
 
-// Pass the searchbox value to get the location weather
-myForm.addEventListener('submit', (e) => {
+// Event listener for form submission
+myForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    (async () => {
-        weatherData = await weather(searchbox.value);
+
+    try {
+        const weatherData = await weather(searchbox.value);
         displayLocation(weatherData.location);
-    })();
+    } catch (error) {
+        throw new Error('Error fetching weather');
+    }
 });
