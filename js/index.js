@@ -4,12 +4,14 @@ import '../css/style.css';
 import weather from './weather.js';
 import constraintValidation from './constraintValidation.js';
 import displayLocation from './displayLocation.js';
+import displayCurrentWeather from './displayCurrentWeather.js';
 
 // Initial city given and temperature display
 async function initializeWeather() {
     try {
         const weatherData = await weather('London');
         displayLocation(weatherData.location);
+        displayCurrentWeather(weatherData.currentWeather.weatherCode);
     } catch (error) {
         throw new Error('Error initializing weather');
     }
@@ -31,6 +33,7 @@ myForm.addEventListener('submit', async (e) => {
     try {
         const weatherData = await weather(searchbox.value);
         displayLocation(weatherData.location);
+        displayCurrentWeather(weatherData.currentWeather.weatherCode);
     } catch (error) {
         throw new Error('Error fetching weather');
     }
