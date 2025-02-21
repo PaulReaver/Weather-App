@@ -21,6 +21,7 @@ async function weather(cityName) {
         const data = await response.json();
 
         const weatherData = {
+            location: location.name,
             currentWeather: {
                 apparentTemperature: data.current.apparent_temperature,
                 temperature_2m: data.current.temperature_2m,
@@ -33,7 +34,7 @@ async function weather(cityName) {
             },
         };
 
-        console.log(weatherData);
+        return weatherData;
     } catch (error) {
         throw new Error('Could not fetch resource');
     }
