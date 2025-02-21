@@ -1,6 +1,5 @@
-const locationElement = document.querySelector('h1');
-
 function displayLocation(city) {
+    const locationElement = document.querySelector('h1');
     locationElement.textContent = city;
 }
 
