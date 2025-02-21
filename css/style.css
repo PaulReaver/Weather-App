@@ -84,3 +84,9 @@ button:focus-visible {
 button:active {
     filter: brightness(85%);
 }
+
+.today_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
