@@ -1,0 +1,79 @@
+/* Variable declarations */
+:root {
+    --dark-blue: #1c2833;
+    --light-blue: #34495e;
+    --primary-text: #ecf0f1;
+}
+
+/* Font declarations */
+/* nunito-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/nunito-v26-latin-regular.woff2') format('woff2');
+}
+/* nunito-italic - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 400;
+    src: url('./fonts/nunito-v26-latin-italic.woff2') format('woff2');
+}
+/* nunito-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/nunito-v26-latin-700.woff2') format('woff2');
+}
+
+body {
+    background-color: var(--dark-blue);
+    font-family: 'Nunito', sans-serif;
+    color: var(--primary-text);
+}
+
+main {
+    padding: 100px;
+}
+
+input {
+    background-color: var(--light-blue);
+    border-radius: 1rem;
+    padding: 0.5rem 2rem;
+}
+
+input::placeholder {
+    color: var(--primary-text);
+    opacity: 0.5;
+}
+
+input:focus-visible {
+    outline: var(--primary-text) 2px solid;
+}
+
+button {
+    background-color: var(--light-blue);
+    padding: 0.25em 0.75em;
+    border-radius: 0.25em;
+    margin-left: 20px;
+}
+
+button:focus-visible {
+    outline: var(--primary-text) 2px solid;
+}
+
+@media (hover: hover) {
+    button:hover {
+        background-color: var(--primary-text);
+        color: var(--dark-blue);
+    }
+}
+
+button:active {
+    filter: brightness(85%);
+}
