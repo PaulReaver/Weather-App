@@ -3,6 +3,11 @@ import '../css/style.css';
 
 import weather from './weather.js';
 import constraintValidation from './constraintValidation.js';
+import displayLocation from './displayLocation.js';
+
+// Initial city given and temperature display
+let weatherData = await weather('London');
+displayLocation(weatherData.location);
 
 // Get a reference to the form searchbox
 const searchbox = document.querySelector('#searchbox');
@@ -16,5 +21,8 @@ constraintValidation(searchbox);
 // Pass the searchbox value to get the location weather
 myForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    weather(searchbox.value);
+    (async () => {
+        weatherData = await weather(searchbox.value);
+        displayLocation(weatherData.location);
+    })();
 });
