@@ -1,31 +1,32 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Weather App" />
-        <meta name="color-scheme" content="dark" />
-        <title>Weather App</title>
-        <script src="./js/index.js" type="module"></script>
-    </head>
-    <body>
-        <main>
-            <form role="search">
-                <label for="searchbox"></label>
-                <input
-                    type="search"
-                    id="searchbox"
-                    name="searchbox"
-                    placeholder="Search for a location..."
-                    required
-                />
-                <button type="submit">Search</button>
-            </form>
-            <h1>...</h1>
-            <div class="today_card">
-                <img></img>
-            </div>
-        </main>
-    </body>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Weather App" />
+    <meta name="color-scheme" content="dark" />
+    <title>Weather App</title>
+    <script src="./js/index.js" type="module"></script>
+</head>
+
+<body>
+    <main>
+        <form role="search">
+            <label for="searchbox"></label>
+            <input type="search" id="searchbox" name="searchbox" placeholder="Search for a location..." required />
+            <button type="submit">Search</button>
+        </form>
+        <h1>...</h1>
+        <div class="today_card">
+            <img></img>
+            <section class="current_temperature_wrapper">
+                <h2 class="current_temperature">...</h2>
+                <p class="current_apparent_temperature">...</p>
+            </section>
+        </div>
+    </main>
+</body>
+
 </html>
