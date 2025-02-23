@@ -14,7 +14,8 @@ async function initializeWeather() {
         displayLocation(weatherData.location);
         displayWeatherIcon(
             document.querySelector('.today_card img'),
-            weatherData.currentWeather.weatherCode
+            weatherData.currentWeather.weatherCode,
+            weatherData.currentWeather.isDay
         );
     } catch (error) {
         throw new Error('Error initializing weather');
@@ -39,7 +40,8 @@ myForm.addEventListener('submit', async (e) => {
         displayLocation(weatherData.location);
         displayWeatherIcon(
             document.querySelector('.today_card img'),
-            weatherData.currentWeather.weatherCode
+            weatherData.currentWeather.weatherCode,
+            weatherData.currentWeather.isDay
         );
     } catch (error) {
         throw new Error('Error fetching weather');
