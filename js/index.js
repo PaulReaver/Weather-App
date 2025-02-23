@@ -10,6 +10,7 @@ import displayWeatherIcon from './displayWeatherIcon.js';
 async function initializeWeather() {
     try {
         const weatherData = await weather('London');
+
         displayLocation(weatherData.location);
         displayWeatherIcon(
             document.querySelector('.today_card img'),
