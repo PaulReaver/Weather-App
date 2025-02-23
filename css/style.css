@@ -96,11 +96,10 @@ button:active {
     height: 150px;
 }
 
-.current_temperature {
+.current_temperature_wrapper > h2 {
     font-size: 4rem;
 }
-
-.current_apparent_temperature {
+.current_temperature_wrapper > p {
     font-size: 1.25rem;
     font-style: italic;
     opacity: 60%;
