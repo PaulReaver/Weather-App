@@ -90,3 +90,18 @@ button:active {
     justify-content: center;
     align-items: center;
 }
+
+.today_card > img {
+    width: 150px;
+    height: 150px;
+}
+
+.current_temperature {
+    font-size: 4rem;
+}
+
+.current_apparent_temperature {
+    font-size: 1.25rem;
+    font-style: italic;
+    opacity: 60%;
+}
