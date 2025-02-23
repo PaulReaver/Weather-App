@@ -1,4 +1,4 @@
-function displayCurrentWeather(weatherCode) {
+function displayWeatherIcon(weatherCode) {
     const weatherImage = document.querySelector('.today_card img');
 
     switch (weatherCode) {
@@ -49,4 +49,4 @@ function displayCurrentWeather(weatherCode) {
     }
 }
 
-export default displayCurrentWeather;
+export default displayWeatherIcon;
