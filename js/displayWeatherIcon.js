@@ -1,5 +1,6 @@
-function displayWeatherIcon(weatherImage, weatherCode) {
+function displayWeatherIcon(weatherImage, weatherCode, isDay) {
     const weatherIcon = weatherImage;
+    console.log(isDay);
 
     switch (weatherCode) {
         case 0:
