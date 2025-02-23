@@ -11,7 +11,10 @@ async function initializeWeather() {
     try {
         const weatherData = await weather('London');
         displayLocation(weatherData.location);
-        displayWeatherIcon(weatherData.currentWeather.weatherCode);
+        displayWeatherIcon(
+            document.querySelector('.today_card img'),
+            weatherData.currentWeather.weatherCode
+        );
     } catch (error) {
         throw new Error('Error initializing weather');
     }
@@ -33,7 +36,10 @@ myForm.addEventListener('submit', async (e) => {
     try {
         const weatherData = await weather(searchbox.value);
         displayLocation(weatherData.location);
-        displayWeatherIcon(weatherData.currentWeather.weatherCode);
+        displayWeatherIcon(
+            document.querySelector('.today_card img'),
+            weatherData.currentWeather.weatherCode
+        );
     } catch (error) {
         throw new Error('Error fetching weather');
     }
