@@ -8,7 +8,7 @@ async function weather(cityName) {
 
         // Fetch weather data from Open Meteo API using the latitude and longitude
         const response = await fetch(
-            `https://api.open-meteo.com/v1/forecast?latitude=${location.latitude}&longitude=${location.longitude}&current=temperature_2m,apparent_temperature,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto`,
+            `https://api.open-meteo.com/v1/forecast?latitude=${location.latitude}&longitude=${location.longitude}&current=temperature_2m,apparent_temperature,is_day,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto`,
             { mode: 'cors' }
         );
 
@@ -23,6 +23,7 @@ async function weather(cityName) {
         const weatherData = {
             location: location.name,
             currentWeather: {
+                isDay: data.current.is_day,
                 apparentTemperature: data.current.apparent_temperature,
                 temperature_2m: data.current.temperature_2m,
                 weatherCode: data.current.weather_code,
