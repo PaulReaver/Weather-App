@@ -49,6 +49,7 @@ main {
 
 h1,
 h2,
+h3,
 p {
     line-height: calc(1em + 0.5rem);
 }
@@ -58,6 +59,11 @@ h1 {
     font-weight: 700;
     text-align: center;
     margin-top: 50px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 input {
@@ -113,4 +119,9 @@ button:active {
     font-size: 1.25rem;
     font-style: italic;
     opacity: 60%;
+}
+
+.daily_card_container {
+    display: flex;
+    justify-content: space-between;
 }
