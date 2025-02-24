@@ -5,6 +5,7 @@ import weather from './weather.js';
 import constraintValidation from './constraintValidation.js';
 import displayLocation from './displayLocation.js';
 import displayWeatherIcon from './displayWeatherIcon.js';
+import assignDates from './assignDates.js';
 
 // Initial city given and temperature display
 async function initializeWeather() {
@@ -21,6 +22,7 @@ async function initializeWeather() {
             `${Math.round(weatherData.currentWeather.temperature_2m)}°`;
         document.querySelector('.current_temperature_wrapper p').textContent =
             `Feels like ${Math.round(weatherData.currentWeather.apparentTemperature)}°`;
+        assignDates();
     } catch (error) {
         throw new Error('Error initializing weather');
     }
@@ -51,6 +53,7 @@ myForm.addEventListener('submit', async (e) => {
             `${Math.round(weatherData.currentWeather.temperature_2m)}°`;
         document.querySelector('.current_temperature_wrapper p').textContent =
             `Feels like ${Math.round(weatherData.currentWeather.apparentTemperature)}°`;
+        assignDates();
     } catch (error) {
         throw new Error('Error fetching weather');
     }
