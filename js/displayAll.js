@@ -27,6 +27,21 @@ function displayAll(weatherData) {
     dailyIcons.forEach((img, i) => {
         displayWeatherIcon(img, weatherData.dailyWeather.weather_code[i]);
     });
+
+    // // Displays daily weather temperatures
+    const dailyTemperatures = document.querySelectorAll(
+        '.daily_card_container p'
+    );
+    dailyTemperatures.forEach((p, i) => {
+        const eachP = p;
+        const correctMinTemperature = Math.round(
+            weatherData.dailyWeather.temperature_2m_min[i]
+        );
+        const correctMaxTemperature = Math.round(
+            weatherData.dailyWeather.temperature_2m_max[i]
+        );
+        eachP.textContent = `${correctMinTemperature}° - ${correctMaxTemperature}°`;
+    });
 }
 
 export default displayAll;
