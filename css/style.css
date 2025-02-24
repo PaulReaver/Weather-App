@@ -66,6 +66,11 @@ h3 {
     font-weight: 700;
 }
 
+form {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
 input {
     background-color: var(--light-blue);
     border-radius: 1rem;
@@ -105,6 +110,7 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 .today_card > img {
@@ -124,4 +130,19 @@ button:active {
 .daily_card_container {
     display: flex;
     justify-content: space-between;
+}
+
+.daily_card_container > section {
+    text-align: center;
+    padding: 25px;
+}
+
+.daily_card_container p {
+    font-size: 1rem;
+}
+
+.divider {
+    width: 2px;
+    background: var(--primary-text);
+    opacity: 20%;
 }
