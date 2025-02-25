@@ -27,7 +27,7 @@ myForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     try {
-        const weatherData = await weather(searchbox.value);
+        const weatherData = await weather(searchbox.value.trim());
         displayAll(weatherData);
     } catch (error) {
         throw new Error('Error fetching weather');
