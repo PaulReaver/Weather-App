@@ -113,11 +113,6 @@ button:active {
     margin-bottom: 100px;
 }
 
-.today_card > img {
-    width: 150px;
-    height: 150px;
-}
-
 .current_temperature_wrapper > h2 {
     font-size: 4rem;
 }
