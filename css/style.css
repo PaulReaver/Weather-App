@@ -129,12 +129,13 @@ button:active {
 
 .daily_card_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2.5rem;
 }
 
 .daily_card_container > section {
     text-align: center;
-    padding: 25px;
+    padding: 25px 0;
 }
 
 .daily_card_container p {
