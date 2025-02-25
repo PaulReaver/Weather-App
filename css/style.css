@@ -4,6 +4,7 @@
     --dark-blue: #1c2833;
     --light-blue: #34495e;
     --primary-text: #ecf0f1;
+    --secondary-text: hsla(192, 15%, 94%, 0.6);
 }
 
 /* || Typography */
@@ -46,6 +47,11 @@ main {
 }
 
 /* || General styles */
+
+::selection {
+    color: var(--dark-blue);
+    background-color: var(--primary-text);
+}
 
 h1,
 h2,
@@ -117,9 +123,9 @@ button:active {
     font-size: 4rem;
 }
 .current_temperature_wrapper > p {
+    color: var(--secondary-text);
     font-size: 1.25rem;
     font-style: italic;
-    opacity: 60%;
 }
 
 .daily_card_container {
@@ -140,5 +146,5 @@ button:active {
 .divider {
     width: 2px;
     background: var(--primary-text);
-    opacity: 20%;
+    opacity: 0.2;
 }
