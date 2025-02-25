@@ -1,5 +1,5 @@
 function displayWeatherIcon(weatherImage, weatherCode, isDay) {
-    const weatherIcon = weatherImage;
+    const weatherIcon = weatherImage; // Get the imager for the weather forecast
 
     switch (weatherCode) {
         case 0:

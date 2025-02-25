@@ -23,7 +23,7 @@ function displayAll(weatherData) {
     assignDates(); // Displays the daily dates
 
     // Displays daily weather icons
-    const dailyIcons = document.querySelectorAll('.daily_card_container img');
+    const dailyIcons = document.querySelectorAll('.daily_card_container img'); // Get icons for the daily weather forecast
     dailyIcons.forEach((img, i) => {
         displayWeatherIcon(img, weatherData.dailyWeather.weather_code[i]);
     });
@@ -33,7 +33,7 @@ function displayAll(weatherData) {
         '.daily_card_container p'
     );
     dailyTemperatures.forEach((p, i) => {
-        const eachP = p;
+        const eachP = p; // Get each paragraph for the min and max temperature
         const correctMinTemperature = Math.round(
             weatherData.dailyWeather.temperature_2m_min[i]
         );
