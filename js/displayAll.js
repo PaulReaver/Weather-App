@@ -25,7 +25,7 @@ function displayAll(weatherData) {
     // Displays daily weather icons
     const dailyIcons = document.querySelectorAll('.daily_card_container img'); // Get icons for the daily weather forecast
     dailyIcons.forEach((img, i) => {
-        displayWeatherIcon(img, weatherData.dailyWeather.weather_code[i]);
+        displayWeatherIcon(img, weatherData.dailyWeather.weather_code[i], 1);
     });
 
     // // Displays daily weather temperatures
