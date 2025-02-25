@@ -97,6 +97,7 @@ button {
     padding: 0.25em 0.75em;
     border-radius: 0.25em;
     margin-left: 20px;
+    min-width: 10ch;
 }
 
 @media (hover: hover) {
