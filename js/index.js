@@ -6,7 +6,7 @@ import constraintValidation from './constraintValidation.js';
 import displayAll from './displayAll.js';
 import { saveToLocalStorage, loadFromLocalStorage } from './localStorage.js';
 
-const loader = document.querySelector('.loader_container');
+const loader = document.querySelector('.loader');
 
 // Initial city given and temperature display with IIFE
 (async function initializeWeather() {
