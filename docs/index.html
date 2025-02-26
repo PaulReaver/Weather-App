@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Weather App" />
+    <meta name="color-scheme" content="dark" />
+    <title>Weather App</title>
+    <!-- Preconnect to the OpenMeteo API -->
+    <link rel="preconnect" href="https://api.open-meteo.com">
+    <link rel="preconnect" href="https://geocoding-api.open-meteo.com">
+  <script type="module" crossorigin src="./assets/index-B0uNawQm.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Cyadhymr.css">
+</head>
+
+<body>
+    <main>
+        <form role="search">
+            <label for="searchbox" aria-label="Search Location"></label>
+            <input type="search" id="searchbox" name="searchbox" placeholder="Search for a location..." required />
+            <button type="submit">Search</button>
+            <div class="loader hidden"></div>
+        </form>
+        <h1>...</h1>
+        <div class="today_card">
+            <img width="150" height="150" alt="Today's weather icon"></img>
+            <section class="current_temperature_wrapper">
+                <h2>...</h2>
+                <p>...</p>
+            </section>
+        </div>
+        <div class="daily_card_container">
+            <section>
+                <h3>...</h3>
+                <img width="80" height="80" alt="Day 1 weather icon"></img>
+                <p>...</p>
+            </section>
+            <hr>
+            <section>
+                <h3>...</h3>
+                <img width="80" height="80" alt="Day 2 weather icon"></img>
+                <p>...</p>
+            </section>
+            <hr>
+            <section>
+                <h3>...</h3>
+                <img width="80" height="80" alt="Day 3 weather icon"></img>
+                <p>...</p>
+            </section>
+            <hr>
+            <section>
+                <h3>...</h3>
+                <img width="80" height="80" alt="Day 4 weather icon"></img>
+                <p>...</p>
+            </section>
+            <hr>
+            <section>
+                <h3>...</h3>
+                <img width="80" height="80" alt="Day 5 weather icon"></img>
+                <p>...</p>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
