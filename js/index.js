@@ -6,12 +6,16 @@ import constraintValidation from './constraintValidation.js';
 import displayAll from './displayAll.js';
 import { saveToLocalStorage, loadFromLocalStorage } from './localStorage.js';
 
+const loader = document.querySelector('.loader_container');
+
 // Initial city given and temperature display with IIFE
 (async function initializeWeather() {
     try {
+        loader.classList.toggle('hidden');
         const initialLocation = loadFromLocalStorage('location') || 'London';
         const weatherData = await weather(initialLocation);
         displayAll(weatherData);
+        loader.classList.toggle('hidden');
     } catch (error) {
         throw new Error('Error initializing weather');
     }
@@ -29,10 +33,12 @@ myForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     try {
+        loader.classList.toggle('hidden');
         const searchboxValue = searchbox.value.trim();
         const weatherData = await weather(searchboxValue);
         saveToLocalStorage('location', searchboxValue);
         displayAll(weatherData);
+        loader.classList.toggle('hidden');
     } catch (error) {
         throw new Error('Error fetching weather');
     }
