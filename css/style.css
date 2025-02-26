@@ -154,11 +154,11 @@ hr {
 }
 
 .loader {
-    border: 5px solid var(--light-blue);
-    border-top: 5px solid var(--primary-text);
+    border: 0.4rem solid var(--light-blue);
+    border-top: 0.4rem solid var(--primary-text);
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 1.9rem;
+    height: 1.9rem;
     animation: spin 2s linear infinite;
     visibility: visible;
 }
