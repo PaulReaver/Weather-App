@@ -4,11 +4,13 @@ import '../css/style.css';
 import weather from './weather.js';
 import constraintValidation from './constraintValidation.js';
 import displayAll from './displayAll.js';
+import { saveToLocalStorage, loadFromLocalStorage } from './localStorage.js';
 
 // Initial city given and temperature display with IIFE
 (async function initializeWeather() {
     try {
-        const weatherData = await weather('London');
+        const initialLocation = loadFromLocalStorage('location') || 'London';
+        const weatherData = await weather(initialLocation);
         displayAll(weatherData);
     } catch (error) {
         throw new Error('Error initializing weather');
@@ -27,7 +29,9 @@ myForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     try {
-        const weatherData = await weather(searchbox.value.trim());
+        const searchboxValue = searchbox.value.trim();
+        const weatherData = await weather(searchboxValue);
+        saveToLocalStorage('location', searchboxValue);
         displayAll(weatherData);
     } catch (error) {
         throw new Error('Error fetching weather');
